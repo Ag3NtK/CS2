@@ -30,7 +30,7 @@ unbind "del"
 
 bind "tab" "+showscores"			//	Scoreboard
 bind "q" "lastinv"				//	Last weapon
-bind "w" "+mfwd"				//	Move forward
+bind "w" "+forward"				//	Move forward
 bind "e" "+use"					//	Use
 bind "r" "+reload"				//	Reload
 bind "t" "+spray_menu"				//	Spray menu
@@ -42,37 +42,57 @@ unbind "p"
 unbind "`"
 unbind "pgup"
 
-bind "a" "+mleft"				//	Move left
-bind "s" "+mback"				//	Move backwards
-bind "d" "+mright"				//	Move right
+bind "a" "+left"				//	Move left
+bind "s" "+back"				//	Move backwards
+bind "d" "+right"				//	Move right
 unbind "f"
 bind "g" "drop"					//	Drop weapon	
 bind "h" "slot4"				//	Go through grenades
-bind "j" "+runthrow; +throwaction"		//	Run jump throw
+bind "j" "+jump"
 unbind "k"
 bind "l" "teammenu"				//	Team select menu
 bind "PGDN" "toggleconsole"			//	Console
 
 bind "shift" "+sprint"				//	Walk
 unbind "<"
-bind "z" "switchhands"	//	Toggle right hand left hand 
+unbind "z" 
 unbind "x"					
 bind "c" "+voicerecord"				//	voicechat		
-bind "v" "+jumpaction; +throwaction"		//	Jump throw
+bind "v" "+jump"
 bind "b" "buymenu"				//	Buy menu
-unbind "n"
-unbind "m"
+bind "n" "-attack"
+bind "m" "-attack2"
 unbind ","	
 unbind "."
 unbind "-"
 
 bind "ctrl" "+duck"				//	Crouch
 bind "alt" "noclip"				//	Noclip
-bind "space" "slot6"				//	He grenade
+bind "space" "slot6"			//	He grenade
+
+bind "f3" "say_team DROP 5STAR"
+bind "f4" "say_team DROP AR3A"
+bind "f5" "say_team DROP GOYO"
+bind "f6" "say_team DROP RAFA"
+bind "f7" ""
+bind "f8" ""
+bind "f9" ""
+bind "f10" ""
+bind "f11" ""
+unbind "f12"					//	f12 is screenshot
+bind "f13" ""
+bind "f14" ""
+bind "f15" ""
+bind "f16" ""
+bind "f17" ""
+bind "f18" ""
+unbind "f19"
+unbind "f20"
 
 // ALIASES
 
 alias "server" "connect 46.105.118.29:27015; password pracc; gameSettings"
+alias "server2" "connect 37.135.148.52;27015;password pracc; gameSettings"
 alias "surf" "connect 185.246.211.228:26560; surfSettings"
 alias "dm" "connect 94.199.215.74:28715; gameSettings"
 alias "dm2" "connect 185.242.115.194:22222; gameSettings"
@@ -92,30 +112,10 @@ alias "surfSettings" "bind "r" "r"; bind "space" "+jump""
 alias "gameSettings" "bind "r" "+reload"; bind "space" "slot6""
 
 
-// SNAP AND TAP
-
-alias "checkfwd" ""
-alias "checkback" ""
-alias "checkleft" ""
-alias "checkright" ""
-alias "goForward" "-forward; +forward"
-alias "goBack" "-back; +back"
-alias "goLeft" "-left; +left"
-alias "goRight" "-right; +right"
-alias "+mfwd" "-back; +forward; alias checkfwd goForward"
-alias "+mback" "-forward; +back; alias checkback goBack"
-alias "+mleft" "-right; +left; alias checkleft goLeft"
-alias "+mright" "-left; +right; alias checkright goRight"
-alias "-mfwd" "-forward; checkback; alias checkfwd"
-alias "-mback" "-back; checkfwd; alias checkback"
-alias "-mleft" "-left; checkright; alias checkleft"
-alias "-mright" "-right; checkleft; alias checkright"
-
-
 // SETTINGS
 
+r_drawtracers_firstperson "0"
 cl_prefer_lefthanded 1
-r_drawtracers_firstperson 0
 sensitivity "1.4"
 zoom_sensitivity_ratio "0.83"
 r_fullscreen_gamma "2.2"
